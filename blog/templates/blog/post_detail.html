@@ -9,6 +9,11 @@
 
         <!-- Post content-->
         <div id="post-area">
+              {% if post.category %}
+                <span class="badge badge-secondary float-right">{{post.category}}</span>
+              {% else %}
+                <span class="badge badge-secondary float-right">미분류</span>
+              {% endif %}
             <article>
                 <!-- Post header-->
                 <header class="mb-4">
@@ -57,11 +62,7 @@
         </div>
         <!-- Comments section-->
         <div id="comment-area">
-              {% if post.category %}
-                <span class="badge badge-secondary float-right">{{post.category}}</span>
-              {% else %}
-                <span class="badge badge-secondary float-right">미분류</span>
-              {% endif %}
+
             <section class="mb-5">
                 <div class="card bg-light">
                     <div class="card-body">
