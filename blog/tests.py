@@ -219,7 +219,7 @@ class TestView(TestCase):
         response = self.client.get(update_post_url)
         self.assertNotEqual(response.status_code, 200)
 
-        # self.assertNotEqual(self.post_003.author, self.user_trump)
+        self.assertNotEqual(self.post_003.author, self.user_trump)
         self.client.login(
             username=self.user_trump.username,
             paseword='somepassword'
